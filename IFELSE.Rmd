@@ -1,0 +1,24 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+calificación = 70
+if (calificación >= 70){
+  print("Aprobado")
+} else{
+  print("Suspenso")
+}
+```
+```{r}
+calificación = 44
+if (calificación >= 70){
+  print("Aprobado")
+} else if (calificación >= 50 && calificación < 70 ){
+  print("Suspenso")
+} else{
+  print("Tutoría")
+}
+```
+
