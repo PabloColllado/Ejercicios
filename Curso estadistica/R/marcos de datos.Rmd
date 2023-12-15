@@ -1,0 +1,16 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+costo <- c(7.3, 9.5, 8.6, 11.3, 6.7, 7.7)
+mes <- c("enero", "febrero", "marzo", "abril", "mayo", "junio")
+excedente <- c(FALSE, TRUE, FALSE, TRUE, FALSE, FALSE)
+df <- data.frame(costo, mes, excedente)
+df
+```
+
+```{r}
+write.csv(df, "CostoProducción.csv", row.names = FALSE)
+```
+
