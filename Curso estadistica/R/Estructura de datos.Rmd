@@ -62,3 +62,29 @@ Dado un vector de datos $x$ podemos calcular muchas medidas estadísticas del mi
       - Permite definir sucesiones descritas mediante sumatorios.
 
       - Cada entrada cumsum(x) es la suma de las entradas de $x$ hasta su posición.
+-```sort(x)```: ordena el vector en orden natural de los objetos que lo forman: el orden númerico creciente, orden alfabético...
+-```rev(x)```: invierte el orden de los elementos del vector $x$.
+
+
+## Ejercicio: Binomio de Newton
+### Producto notable
+La fórmula del producto notable es: $$(a+b)^2=a^2+2ab+b^2$$
+
+Función en R:
+```{r}
+binomioNewton2 = function(a,b){
+  a^2+2*a*b+b^2
+}
+binomioNewton2(1,2)
+binomioNewton2(2,1)
+```
+### Binomio de Newton
+$$(a+b)^n=\sum_{k=0}^n{n\choose k}\cdot a^{n-k}\cdot b^k$$
+Funcion en R:
+```{r}
+binomioNewton=function(a,b,n){
+  cumsum(choose(n,(0:n))*a^{n-(0:n)}*b^(0:n))[n+1]
+}
+binomioNewton(2,1,2)
+```
+
